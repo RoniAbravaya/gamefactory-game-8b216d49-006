@@ -1,0 +1,259 @@
+{
+  "levels": [
+    {
+      "level_number": 1,
+      "name": "Beginner's Run",
+      "is_free": true,
+      "unlock_requirement": "none",
+      "difficulty": 0.2,
+      "time_limit_seconds": 60,
+      "target_score": 100,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 5,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 10,
+        "value": 10
+      },
+      "special_features": [],
+      "background_theme": "grassy_meadow",
+      "music_track": "level_1"
+    },
+    {
+      "level_number": 2,
+      "name": "Jumping Hurdles",
+      "is_free": true,
+      "unlock_requirement": "none",
+      "difficulty": 0.3,
+      "time_limit_seconds": 60,
+      "target_score": 150,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 8,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 15,
+        "value": 10
+      },
+      "special_features": [],
+      "background_theme": "grassy_meadow",
+      "music_track": "level_2"
+    },
+    {
+      "level_number": 3,
+      "name": "Tricky Terrain",
+      "is_free": true,
+      "unlock_requirement": "none",
+      "difficulty": 0.4,
+      "time_limit_seconds": 90,
+      "target_score": 200,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 10,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 20,
+        "value": 10
+      },
+      "special_features": [],
+      "background_theme": "grassy_meadow",
+      "music_track": "level_3"
+    },
+    {
+      "level_number": 4,
+      "name": "Obstacle Course",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.5,
+      "time_limit_seconds": 90,
+      "target_score": 250,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 12,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 25,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform"
+      ],
+      "background_theme": "forest_clearing",
+      "music_track": "level_4"
+    },
+    {
+      "level_number": 5,
+      "name": "Treacherous Trail",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.6,
+      "time_limit_seconds": 120,
+      "target_score": 300,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 15,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 30,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform",
+        "spikes"
+      ],
+      "background_theme": "forest_clearing",
+      "music_track": "level_5"
+    },
+    {
+      "level_number": 6,
+      "name": "Perilous Peaks",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.7,
+      "time_limit_seconds": 120,
+      "target_score": 350,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 18,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 35,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform",
+        "spikes",
+        "disappearing_platform"
+      ],
+      "background_theme": "snowy_mountains",
+      "music_track": "level_6"
+    },
+    {
+      "level_number": 7,
+      "name": "Hazardous Highlands",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.8,
+      "time_limit_seconds": 150,
+      "target_score": 400,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 20,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 40,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform",
+        "spikes",
+        "disappearing_platform",
+        "rotating_platform"
+      ],
+      "background_theme": "snowy_mountains",
+      "music_track": "level_7"
+    },
+    {
+      "level_number": 8,
+      "name": "Daunting Descent",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.8,
+      "time_limit_seconds": 150,
+      "target_score": 450,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 22,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 45,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform",
+        "spikes",
+        "disappearing_platform",
+        "rotating_platform",
+        "bouncing_platform"
+      ],
+      "background_theme": "snowy_mountains",
+      "music_track": "level_8"
+    },
+    {
+      "level_number": 9,
+      "name": "Treacherous Traverse",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.9,
+      "time_limit_seconds": 180,
+      "target_score": 500,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 25,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 50,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform",
+        "spikes",
+        "disappearing_platform",
+        "rotating_platform",
+        "bouncing_platform",
+        "swinging_platform"
+      ],
+      "background_theme": "snowy_mountains",
+      "music_track": "level_9"
+    },
+    {
+      "level_number": 10,
+      "name": "Pinnacle of Peril",
+      "is_free": false,
+      "unlock_requirement": "rewarded_ad",
+      "difficulty": 0.9,
+      "time_limit_seconds": 180,
+      "target_score": 550,
+      "obstacles": {
+        "type": "static_platform",
+        "count": 28,
+        "speed": 0
+      },
+      "collectibles": {
+        "type": "coin",
+        "count": 55,
+        "value": 10
+      },
+      "special_features": [
+        "moving_platform",
+        "spikes",
+        "disappearing_platform",
+        "rotating_platform",
+        "bouncing_platform",
+        "swinging_platform",
+        "teleporting_platform"
+      ],
+      "background_theme": "snowy_mountains",
+      "music_track": "level_10"
+    }
+  ]
+}
