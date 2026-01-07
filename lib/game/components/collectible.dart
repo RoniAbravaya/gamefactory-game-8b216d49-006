@@ -1,61 +1,50 @@
 import 'package:flame/components.dart';
-import 'package:flame/audio.dart';
+import 'package:flame/collisions.dart';
 import 'package:flutter/material.dart';
 
-/// A collectible item that the player can pick up for points.
-class Collectible extends SpriteComponent with CollisionCallbacks {
-  final int scoreValue;
-  final Audio _collectSound;
+class Collectible extends PositionComponent with CollisionCallbacks {
+  final int value;
+  double _floatOffset = 0;
 
-  /// Creates a new Collectible instance.
-  ///
-  /// [sprite] is the Sprite to be displayed for the collectible.
-  /// [position] is the initial position of the collectible.
-  /// [scoreValue] is the number of points the player receives for collecting this item.
-  /// [collectSound] is the audio clip to be played when the collectible is collected.
   Collectible({
-    required Sprite sprite,
     required Vector2 position,
-    required this.scoreValue,
-    required Audio collectSound,
-  })  : _collectSound = collectSound,
-        super(
-          sprite: sprite,
+    this.value = 10,
+  }) : super(
           position: position,
-          size: Vector2.all(32.0),
+          size: Vector2(30, 30),
+          anchor: Anchor.center,
         );
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
-    anchor = Anchor.center;
-    addComponent(FloatingComponent(this));
+    add(CircleHitbox());
   }
-
-  @override
-  void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
-    super.onCollision(intersectionPoints, other);
-    if (other is Player) {
-      _collectSound.play();
-      other.score += scoreValue;
-      removeFromParent();
-    }
-  }
-}
-
-/// A component that makes the Collectible float up and down.
-class FloatingComponent extends Component with HasGameRef {
-  final Collectible _collectible;
-  double _offset = 0.0;
-  final double _amplitude = 2.0;
-  final double _frequency = 2.0;
-
-  FloatingComponent(this._collectible);
 
   @override
   void update(double dt) {
     super.update(dt);
-    _offset += dt * _frequency;
-    _collectible.position.y = _collectible.position.y + (_amplitude * sin(_offset));
+    
+    position.y += 80 * dt;
+    
+    _floatOffset += dt * 5;
+    position.x += (0.5 * ((_floatOffset % 2) < 1 ? 1 : -1));
+    
+    if (position.y > 900) {
+      removeFromParent();
+    }
+  }
+
+  @override
+  void render(Canvas canvas) {
+    canvas.drawCircle(
+      Offset(size.x / 2, size.y / 2),
+      size.x / 2,
+      Paint()..color = Colors.amber,
+    );
+  }
+
+  void collect() {
+    removeFromParent();
   }
 }
